@@ -181,6 +181,19 @@ Disable required date field `dateTimeNotRequired`
    Be aware that using this feature may lead to unexpected results if using
    e.g. the date menu if the field is not used anymore.
 
+.. _extensionConfigurationMediaPreview:
+
+Show thumbnails in backend list module `mediaPreview` (TYPO3 10 only)
+---------------------------------------------------------------------
+
+.. confval:: mediaPreview
+
+   :type: bool
+   :Default: false
+
+   If enabled, the list module will show thumbnails of the media items.
+
+
 .. _extensionConfigurationAdvancedMediaPreview:
 
 Advanced preview configuration for media files `advancedMediaPreview`

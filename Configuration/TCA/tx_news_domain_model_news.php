@@ -833,6 +833,12 @@ $tx_news_domain_model_news = [
     ]
 ];
 
+// add media preview in listview to TYPO3 10 only
+$versionInformation = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Information\Typo3Version::class);
+if ($versionInformation->getMajorVersion() === 10) {
+    $tx_news_domain_model_news['ctrl']['thumbnail'] .= $configuration->isMediaPreview() ? 'fal_media' : '';
+}
+
 // category restriction based on settings in extension manager
 $categoryRestrictionSetting = $configuration->getCategoryRestriction();
 if ($categoryRestrictionSetting) {
